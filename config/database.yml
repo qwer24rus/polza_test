@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: <%= ENV['DATABASE_HOST'] || 'localhost' %>
+  pool: <%= ENV['DB_POOL'] || 5 %>
+
+development:
+  <<: *default
+  database: polza_testcase_development
+  user: <%= ENV['DATABASE_USER'] || 'polza_test' %>
+  password: <%= ENV['DATABASE_PASSWORD'] || 'polza_test' %>
+
+test:
+  <<: *default
+  database: polza_testcase_test
+  user: <%= ENV['DATABASE_USER'] || 'polza_test' %>
+  password: <%= ENV['DATABASE_PASSWORD'] || 'polza_test' %>
+
+production:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>

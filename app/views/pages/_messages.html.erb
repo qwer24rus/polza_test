@@ -1,0 +1,6 @@
+<div class="note_message show <%= messages['class'] %>" data-controller="message">
+  <h4><%= messages['title'] %></h4>
+  <% messages['text'].each do |message| %>
+      <p><%= message %></p>
+  <% end %>
+</div>

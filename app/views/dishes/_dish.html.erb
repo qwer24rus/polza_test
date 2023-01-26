@@ -1,0 +1,8 @@
+<div class="single_product show" data-ingredients="<%= dish.ingredients.ids %>">
+  <h4><%= dish.name %></h4>
+  <ul class="ingredients_list">
+    <% dish.ingredients.each do |ingredient| %>
+      <li><%= ingredient.name %></li>
+    <% end %>
+  </ul>
+</div>

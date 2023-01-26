@@ -1,0 +1,24 @@
+<%= render partial: 'messages', locals: { messages: flash[:messages] } if flash.any? %>
+<section id="buy">
+  <h1><%= t('.title') %></h1>
+  <div class="table">
+    <div class="ingredients_list" data-controller="sort">
+        <h3><%= t('.product_filter') %></h3>
+        <%= form_for Order.new, url:add_order_path, remote: false, method: :put do |f| %>
+          <%= f.collection_check_boxes(:not_included_ingredients, @ingredients, :id, :name) do |d| %>
+            <div class="ingredient">
+              <%= d.label  %>
+              <%= d.check_box data: {action: 'change->sort#sort_dishes'} %>
+            </div>
+          <% end %>
+          <div class="btn_wrap">
+            <%= f.submit t('.btn.make_order') %>
+          </div>
+        <% end %>
+    </div>
+    <div class="product_list">
+      <h3><%= t('.dishes_list') %>:</h3>
+      <%= render @dishes %>
+    </div>
+  </div>
+</section>

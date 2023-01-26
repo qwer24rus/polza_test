@@ -1,0 +1,22 @@
+ru:
+  pages:
+    index:
+      title: "Выберите продукты для заказа"
+      product_filter: "Исключить данные продукты:"
+      dishes_list: "В заказе будут следующие блюда"
+      btn:
+        make_order: "Заказать"
+  messages:
+    title:
+      success: "Успех"
+      error: "Ошибка"
+    text:
+      order_placed: "Заказ успешно размещен."
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "Ошибочная запись"
+      models:
+        orders:
+          attributes:
+            dish_count_invalid: "Количество блюд в заказе должно быть больше нуля"
