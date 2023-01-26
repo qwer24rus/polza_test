@@ -8,10 +8,10 @@
 **PostgreSQL** 12.10 (Ubuntu 12.10-0ubuntu0.20.04.1)
 
 Начала работы:
-1. Скачиваем репозиторий
+1. Скачиваем репозиторий и переходим в его директорию
 2. `bundle install`
 3. `EDITOR="mate --wait" bin/rails credentials:edit`
-4. Настраиваем config/database.yml (дибо вписываем своего пользователя и пароль, либо добавляем в env DATABASE_USER и DATABASE_PASSWORD)
+4. Настраиваем config/database.yml (либо вписываем своего пользователя и пароль, либо добавляем в env DATABASE_USER и DATABASE_PASSWORD с необходимыми данными)
 5. `bundle exec rake db:create`
 6. `bundle exec rake db:migrate`
 7. Загружаем данные из yml-файла:
